@@ -3,7 +3,7 @@ simple GateControl
     parameters:
         string gatename;
         string action;
-        volatile double productionTime @unit(s) = default(0);
+        volatile double intervalTime @unit(s) = default(0);
     gates:
         input in;
         input from_create @loose;

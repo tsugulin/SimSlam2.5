@@ -27,7 +27,7 @@ void GateControl::handleMessage(cMessage *msg)
         // 前工程から届いたメッセージの場合
         if (mode) gkp->open(kind);  else  gkp->close(kind);     // 指定された信号の色を変更する
         msg->setTimestamp(simTime());                           // アクティビティの開始時間をセット
-        scheduleAt(simTime() + par("productionTime"), msg);     // 生産開始
+        scheduleAt(simTime() + par("intervalTime"), msg);     // 生産開始
     }
 }
 
